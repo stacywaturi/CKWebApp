@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/CloudKeyWebApp/src/AppBundle" isTestSource="false" packagePrefix="AppBundle\" />
+      <sourceFolder url="file://$MODULE_DIR$/CloudKeyWebApp/tests" isTestSource="true" packagePrefix="Tests\" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/doctrine/annotations" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/doctrine/collections" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/doctrine/common" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/doctrine/dbal" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/doctrine/doctrine-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/doctrine/doctrine-cache-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/doctrine/orm" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/fig/link-util" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/incenteev/composer-parameter-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/jdorn/sql-formatter" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/paragonie/random_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/psr/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/psr/link" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/sensio/distribution-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/sensio/framework-extra-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/sensio/generator-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/sensiolabs/security-checker" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/swiftmailer/swiftmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/symfony/monolog-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/symfony/phpunit-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/symfony/polyfill-apcu" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/symfony/polyfill-intl-icu" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/symfony/polyfill-php56" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/symfony/polyfill-php70" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/symfony/polyfill-util" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/symfony/swiftmailer-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/symfony/symfony" />
+      <excludeFolder url="file://$MODULE_DIR$/CloudKeyWebApp/vendor/twig/twig" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
