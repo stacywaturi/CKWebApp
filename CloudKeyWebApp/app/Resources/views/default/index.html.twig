@@ -10,21 +10,30 @@
                 {% if app.user != null %}
                 <table class="table">
                     <tr>
+
                         <th>Name </th>
                         <th>Status</th>
+                        <th>Created</th>
+                        <th>Expiry </th>
+                        <th>Serial Number</th>
+                        <th>Common Name</th>
+                        <th>Issuer</th>
                     </tr>
 
-                    {% for key, item in certificates %}
+                    {% for array in certificates %}
                         <tr>
-                            <td>{{ key }}</td><td>{{ item }}</td>
+                            {% for value in array %}
+                                <td>{{ value }}</td>
+                            {% endfor %}
                         </tr>
                     {% endfor %}
                 </table>
 
+
             </div>
 
             <div class="form-group">
-                <div class="col-md-6 col-md-offset-4">
+                <div class="col-md-6 col-md-offset-0">
                     <form action='' method='post'>
                         <button type="submit" name="new" class="btn btn-primary">
                             <i class="fa fa-btn"></i>New Certificate
