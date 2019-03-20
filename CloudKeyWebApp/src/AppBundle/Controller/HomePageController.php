@@ -19,10 +19,13 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class HomePageController extends Controller
 {
     /**
-     * @Route("/", name="welcome")
+     * @Route("/", name="welcomeCertificate")
+     *
      */
     public function showAction(Request $request)
     {
+
+
 //        $userId = $user->getUsername();
 
 
@@ -66,14 +69,14 @@ class HomePageController extends Controller
      */
     public function createCertificate(Request $request)
     {
-        //Create a new blank user and process the form
-
 
         $form = $this->createForm(CertificateType::class);
+
+
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-            //Redirect to Login Page
+            //Redirect to Home Page
             return $this->redirectToRoute('welcome');
 
         }
@@ -147,7 +150,6 @@ class HomePageController extends Controller
             return $this->redirectToRoute('delete');
         }
 
-
         return $this->render('cert_manager/view.html.twig', array('certificates'=> $certificates));
 
     }
@@ -167,7 +169,7 @@ class HomePageController extends Controller
 
         ];
         $cert_id = 'https://tf-test-vault.vault.azure.net/certificates/cert4/81cb3610b94c4950b7b8223b1574be3c';
-        $key_id = 'https://tf-test-vault.vault.azure.net/keys/cert4/81cb3610b94c4950b7b8223b1574be3c';
+        $key_id = 'https://tf-test-vault.vault.azure.net/keys/cert4/81cb3610b94c495                     0b7b8223b1574be3c';
 
 
 

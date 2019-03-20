@@ -24,10 +24,18 @@ class RegistrationController extends Controller
         {
             //Create a new blank user and process the form
             $user = new User();
-            $form = $this->createForm(UserType::class,$user);
+            $form = $this->createForm(UserType::class, $user);
+//            $form = $this->createForm(UserType::class,$user,
+//                    array('csrf_protection'=>false)
+//            );
+//            $this->get('liform')->transform($form);
             $form->handleRequest($request);
-
-            if($form->isSubmitted() && $form->isValid()){
+            var_dump( $form->getData());
+            var_dump(!is_null( $form->getData()));
+//            var_dump( $form->getErrors());
+            if( !is_null( $form->getData())){
+                //var_dump($form->getData());die;
+                //var_dump($form->get('plainPassword.first'));
                 //Encode new users password
                 $encoder = $this->get('security.password_encoder');
                 $password = $encoder->encodePassword($user, $user->getPlainPassword());
@@ -40,6 +48,7 @@ class RegistrationController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($user);
                 $em->flush();
+
 
                 //Redirect to Login Page
                 return $this->redirectToRoute('login');
