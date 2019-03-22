@@ -33,14 +33,33 @@ class KeysController extends Controller
     public function createKey(Request $request)
     {
         $data  = json_decode($request->getContent(), true);
+        $response = $data;
+        if($this->getUser()){
 
+            $data = array_merge( $data, array( "user_id" =>$this->getUser()->getId()) );
 
-        $data = array_merge( $data, array( "user_id" =>$this->getUser()->getId()) );
+            $response = $this->makeRequest(json_encode($data));
+            var_dump($data);
+            return new JsonResponse($response, 200);
 
-        $response = $this->makeRequest(json_encode($data));
+        }
 
-        var_dump($data);
-        return new JsonResponse( $response, 200);
+        else{
+            return new JsonResponse(array(
+                "error" => "Forbidden",
+                "message" =>"Could create key, please log in first",
+//         ,
+            ), 403);
+
+        }
+
+//
+//        $data = array_merge( $data, array( "user_id" =>$this->getUser()->get) );
+//
+//        $response = $this->makeRequest(json_encode($data));
+//
+//        var_dump($data);
+
     }
 
     /**

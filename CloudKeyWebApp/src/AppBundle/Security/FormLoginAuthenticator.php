@@ -46,13 +46,20 @@ class FormLoginAuthenticator extends AbstractFormLoginAuthenticator
      */
     public function getCredentials(Request $request)
     {
-        if($request->getPathInfo() != '/login_check'){
+        if($request->getPathInfo() != '/login'){
             return;
         }
 
-        $email = $request->request->get('_email');
+
+        $data  = json_decode($request->getContent(), true);
+
+
+        $email = $data['email'];
+        $password = $data['password'];
+
+//        $email = $request->request->get('email');
         $request->getSession()->set(Security::LAST_USERNAME, $email);
-        $password = $request->request->get('_password');
+//        $password = $request->request->get('password');
 
         return [
             'email' => $email,
@@ -95,7 +102,11 @@ class FormLoginAuthenticator extends AbstractFormLoginAuthenticator
      */
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
     {
-        $url = $this->router->generate('welcomeCertificate');
+//        $url = $this->router->generate('welcomeCertificate');
+//        return new RedirectResponse($url);
+        //$request->getSession()->set(Security::AUTHENTICATION_ERROR, $exception);
+        $url = $this->router->generate('login_check');
+
         return new RedirectResponse($url);
     }
 
@@ -107,7 +118,7 @@ class FormLoginAuthenticator extends AbstractFormLoginAuthenticator
     public function onAuthenticationFailure(Request $request, AuthenticationException $exception)
     {
         $request->getSession()->set(Security::AUTHENTICATION_ERROR, $exception);
-        $url = $this->router->generate('login');
+        $url = $this->router->generate('login_check');
 
         return new RedirectResponse($url);
     }
@@ -118,7 +129,7 @@ class FormLoginAuthenticator extends AbstractFormLoginAuthenticator
      */
     protected function getLoginUrl()
     {
-        return $this->router->generate('login');
+        return $this->router->generate('login_check');
 
     }
 
@@ -127,7 +138,7 @@ class FormLoginAuthenticator extends AbstractFormLoginAuthenticator
      */
     protected function getDefaultSuccessRedirectUrl()
     {
-       return $this->router->generate('welcome');
+       return $this->router->generate('logout');
     }
 
     /**
